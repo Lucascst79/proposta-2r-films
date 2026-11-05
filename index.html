@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proposta 2R Film&#39;s</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Layout: proposta comercial em coluna guiada, barra fixa com navegação e valor; faixa azul-marinho no topo e no fechamento */
+  --bg:#f5f7fb;
+  --surface:#ffffff;
+  --ink:#0f1b2d;
+  --muted:#5b6b80;
+  --line:#e1e7ef;
+  --accent:#1f6fff;
+  --accent-soft:#e8f0ff;
+  --navy:#0b1626;
+  --good:#118a47;
+  --good-soft:#e5f6ec;
+  --bad:#c8322b;
+  --display:"Sora","Segoe UI",Arial,sans-serif;
+  --body:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.6 var(--body)}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.02em}
+h1{font-size:clamp(34px,5.4vw,54px);line-height:1.08;font-weight:800}
+h2{font-size:clamp(26px,3.6vw,36px);line-height:1.15;font-weight:700}
+h3{font-size:18px;line-height:1.3;font-weight:700}
+p{margin:0}
+.muted{color:var(--muted)}
+.small{font-size:14px}
+.lead{font-size:18px;color:var(--muted);max-width:60ch}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px}
+
+/* barra fixa */
+.top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:20px;height:64px}
+.brand{font:800 17px/1 var(--display);color:var(--ink);text-decoration:none;white-space:nowrap}
+.brand span{color:var(--accent)}
+.nav{display:flex;gap:4px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+.nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:14px;padding:8px 12px;border-radius:8px;white-space:nowrap}
+.nav a:hover{color:var(--ink);background:var(--bg)}
+.nav a.on{color:var(--accent);background:var(--accent-soft)}
+.pill{background:var(--accent);color:#fff;text-decoration:none;font-weight:700;font-size:14px;padding:10px 16px;border-radius:999px;white-space:nowrap}
+.progress{position:absolute;left:0;bottom:-1px;height:3px;background:var(--accent);width:0}
+@media (max-width:760px){.nav{display:none}.top .pill{margin-left:auto}}
+
+/* topo */
+.hero{background:var(--navy);color:#fff;padding:64px 0 72px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr}.hero .phone{margin:0 auto}}
+.eyebrow{font:700 13px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;color:#8fb6ff}
+.hero .lead{color:#b8c4d6}
+.hero h1 em{font-style:normal;color:#6ea3ff}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;font:700 15px/1 var(--body);padding:15px 22px;border-radius:12px;text-decoration:none;border:1px solid transparent;cursor:pointer}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-ghost{color:#fff;border-color:rgba(255,255,255,.25)}
+.facts{display:flex;flex-wrap:wrap;gap:10px 28px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12)}
+.facts div{font-size:14px;color:#b8c4d6}
+.facts b{display:block;color:#fff;font:700 18px/1.3 var(--display)}
+.hero-copy{display:grid;gap:22px}
+
+/* celular com prévia do site */
+.phone{width:290px;border:10px solid #1c2a3d;border-radius:40px;background:#fff;color:var(--ink);box-shadow:0 30px 60px rgba(0,0,0,.45);overflow:hidden}
+.phone .notch{height:22px;background:#1c2a3d;width:110px;margin:0 auto;border-radius:0 0 14px 14px}
+.ms-head{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;font:800 14px var(--display)}
+.ms-head span{color:var(--accent)}
+.ms-head i{font-style:normal;font:600 11px var(--body);color:var(--muted)}
+.ms-hero{margin:0 10px;border-radius:14px;padding:18px 14px;background:linear-gradient(140deg,#0b1626,#1f4fa8);color:#fff;display:grid;gap:8px}
+.ms-hero b{font:800 19px/1.15 var(--display)}
+.ms-hero small{color:#c8d6ee;font-size:11px}
+.ms-wa{background:#25d366;color:#06351a;font:800 12px var(--body);border-radius:8px;padding:9px;text-align:center}
+.ms-stars{font-size:11px;color:#ffd27a}
+.ms-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:10px}
+.ms-grid div{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:9px;font:700 11px/1.25 var(--body)}
+.ms-grid div small{display:block;font-weight:500;color:var(--muted);font-size:10px}
+.ms-city{padding:0 10px 14px;font-size:10px;color:var(--muted)}
+
+/* seções */
+section.block{padding:72px 0}
+.head{display:grid;gap:10px;margin-bottom:28px;max-width:720px}
+.step{display:inline-flex;align-items:center;gap:8px;font:700 13px/1 var(--body);color:var(--accent);letter-spacing:.06em;text-transform:uppercase}
+.step b{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--accent);color:#fff;font-size:13px;letter-spacing:0}
+
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media (max-width:860px){.stats{grid-template-columns:repeat(2,1fr)}}
+.stat b{display:block;font:800 36px/1 var(--display);font-variant-numeric:tabular-nums}
+.stat span{display:block;margin-top:8px;font-size:14px;color:var(--muted);line-height:1.4}
+.stat.bad b{color:var(--bad)}
+.stat.good b{color:var(--good)}
+
+.ranking{display:grid;gap:12px;margin-top:14px}
+.row{display:grid;grid-template-columns:150px 1fr 54px;gap:14px;align-items:center;font-size:15px}
+.row .track{height:12px;background:var(--bg);border-radius:6px;overflow:hidden}
+.row .fill{height:100%;background:#b9c4d3;border-radius:6px}
+.row.me{font-weight:700}
+.row.me .fill{background:var(--accent)}
+.row em{font-style:normal;font-variant-numeric:tabular-nums;text-align:right}
+@media (max-width:520px){.row{grid-template-columns:110px 1fr 40px;font-size:14px}}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:860px){.two{grid-template-columns:1fr}}
+.alert{display:grid;gap:10px}
+.alert li{list-style:none;display:grid;grid-template-columns:22px 1fr;gap:10px;font-size:15px}
+.alert ul{margin:0;padding:0;display:grid;gap:12px}
+.x{width:22px;height:22px;border-radius:50%;background:#fde8e7;color:var(--bad);display:grid;place-items:center;font-weight:800;font-size:13px}
+
+/* abas */
+.tabs{display:inline-flex;gap:4px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:5px;margin-bottom:20px}
+.tabs button{font:700 15px/1 var(--body);padding:12px 18px;border-radius:10px;border:0;background:transparent;color:var(--muted);cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--ink);color:#fff}
+[role=tabpanel][hidden]{display:none}
+
+.feats{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.feat{display:grid;gap:6px}
+.feat .ic{width:40px;height:40px;border-radius:10px;background:var(--accent-soft);display:grid;place-items:center;margin-bottom:6px}
+.feat .ic svg{width:22px;height:22px;stroke:var(--accent);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.feat p{font-size:14px;color:var(--muted)}
+
+.sim{display:grid;grid-template-columns:1.2fr 1fr;gap:24px;align-items:center;margin-top:16px}
+@media (max-width:860px){.sim{grid-template-columns:1fr}}
+.sim svg{width:100%;height:auto;display:block;border-radius:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font:700 15px/1 var(--body);padding:11px 15px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;font-variant-numeric:tabular-nums}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.sim-read b{display:block;font:800 30px/1.1 var(--display)}
+@media (prefers-reduced-motion:no-preference){#tint{transition:opacity .35s ease}}
+
+/* simulador carro e residencial */
+.simx{margin-top:16px;display:grid;gap:22px}
+.simx-top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:14px}
+.simx-top h3{font-size:22px;margin-top:8px}
+.simx-body{display:grid;grid-template-columns:1.4fr 1fr;gap:28px;align-items:start}
+@media (max-width:860px){.simx-body{grid-template-columns:1fr}}
+.stage{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#dfe6ef}
+.stage svg{display:block;width:100%;height:auto}
+.stage svg[hidden]{display:none}
+.badge{position:absolute;left:12px;top:12px;background:rgba(11,22,38,.86);color:#fff;font:700 13px/1 var(--body);padding:8px 11px;border-radius:8px}
+.ctl{display:grid;gap:18px}
+.lbl{font-weight:700;font-size:14px;margin:0 0 8px}
+.sx-read b{display:block;font:800 26px/1.15 var(--display)}
+.sx-read span{color:var(--muted);font-size:15px}
+.meters{display:grid;gap:14px}
+.m{display:grid;gap:6px;font-size:14px}
+.mrow{display:flex;justify-content:space-between;gap:10px}
+.mrow b{font-variant-numeric:tabular-nums}
+.mtrack{height:10px;background:var(--bg);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.mtrack div{height:100%;border-radius:6px;background:var(--accent);width:0}
+#m-luz{background:#f0a400}
+.tip{background:var(--accent-soft);border-radius:12px;padding:12px 14px;font-size:14px;line-height:1.5}
+.daynight[hidden]{display:none}
+@media (prefers-reduced-motion:no-preference){.film,#h-night,#h-glow,#h-shine{transition:opacity .4s ease}.mtrack div{transition:width .4s ease}}
+
+/* perfil do google */
+.gwrap{display:grid;grid-template-columns:minmax(0,420px) 1fr;gap:28px;align-items:start}
+@media (max-width:860px){.gwrap{grid-template-columns:1fr}}
+.seg{display:inline-flex;gap:4px;background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:4px;margin-bottom:14px}
+.seg button{font:700 14px/1 var(--body);padding:10px 16px;border-radius:999px;border:0;background:transparent;color:var(--muted);cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--surface);color:var(--ink);box-shadow:0 1px 3px rgba(15,27,45,.15)}
+.gbp{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px;font-family:Arial,Helvetica,sans-serif;color:#202124;box-shadow:0 8px 24px rgba(15,27,45,.08)}
+.gbp-ph{display:grid;grid-template-columns:2fr 1fr 1fr;gap:4px;height:104px;border-radius:8px;overflow:hidden;margin-bottom:12px}
+.gbp-ph div{background:#e3e7ec;display:grid;place-items:center;font-size:12px;color:#5f6368}
+.gbp-ph .p1{background:linear-gradient(135deg,#0b1626,#1f6fff)}
+.gbp-ph .p2{background:linear-gradient(135deg,#2a2f37,#7d8a9c)}
+.gbp-ph .p3{background:linear-gradient(135deg,#123,#3c5f8f)}
+.gbp h4{margin:0;font-size:21px;font-weight:400}
+.gbp .st{color:#e7711b;font-size:14px}
+.gbp .st span{color:#70757a}
+.gbp .ct{color:#70757a;font-size:13px}
+.gbp-b{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0}
+.gbp-b span{border:1px solid #dadce0;border-radius:16px;padding:5px 11px;font-size:12px;color:#1a73e8}
+.gbp-b span.off{color:#9aa0a6;border-style:dashed}
+.gbp ul{margin:0;padding:0;list-style:none;display:grid;gap:5px;font-size:13px;color:#3c4043}
+.gbp li.miss{color:#c5221f}
+.gbp .po{margin-top:10px;border-top:1px solid #eceff1;padding-top:10px;font-size:12px;color:#3c4043}
+.cmp{width:100%;border-collapse:collapse;font-size:15px;font-variant-numeric:tabular-nums}
+.cmp th,.cmp td{padding:12px 10px;border-bottom:1px solid var(--line);text-align:left}
+.cmp th{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:700}
+.cmp td:nth-child(2){color:var(--muted)}
+.cmp td:nth-child(3){color:var(--good);font-weight:700}
+
+/* compromissos */
+.pact{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media (max-width:860px){.pact{grid-template-columns:1fr}}
+.pact .card{display:grid;gap:12px;align-content:start}
+.who{font:800 12px/1 var(--body);letter-spacing:.12em;text-transform:uppercase}
+.us .who{color:var(--accent)} .you .who{color:#9a6400} .both .who{color:var(--good)}
+.both{border:2px solid var(--good)!important;background:var(--good-soft)!important}
+.ticks{margin:0;padding:0;list-style:none;display:grid;gap:9px;font-size:15px}
+.ticks li{display:grid;grid-template-columns:20px 1fr;gap:8px}
+.ticks li::before{content:"";width:18px;height:18px;margin-top:3px;border-radius:50%;background:var(--good) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E") center/12px no-repeat}
+.goal{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid rgba(17,138,71,.2);font-size:15px}
+.goal:last-child{border-bottom:0}
+.goal b{white-space:nowrap}
+
+/* calculadora */
+.calc{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+@media (max-width:860px){.calc{grid-template-columns:1fr}}
+.field{display:grid;gap:8px}
+.field label{display:flex;justify-content:space-between;font-weight:700}
+.field output{color:var(--accent);font-variant-numeric:tabular-nums}
+input[type=range]{width:100%;accent-color:var(--accent);height:28px}
+.res{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.res div{border:1px solid var(--line);border-radius:12px;padding:16px;background:var(--bg)}
+.res .big{grid-column:1/-1;background:var(--good-soft);border-color:transparent}
+.res b{display:block;font:800 30px/1.1 var(--display);font-variant-numeric:tabular-nums}
+.res .big b{font-size:40px;color:var(--good)}
+.res span{font-size:14px;color:var(--muted)}
+
+/* investimento */
+.offer{display:grid;grid-template-columns:1fr 1fr;border-radius:20px;overflow:hidden;border:1px solid var(--line);background:var(--surface);box-shadow:0 20px 50px rgba(15,27,45,.08)}
+@media (max-width:860px){.offer{grid-template-columns:1fr}}
+.offer-l{background:var(--navy);color:#fff;padding:36px;display:grid;gap:18px;align-content:start}
+.offer-l .price{font:800 clamp(56px,8vw,76px)/1 var(--display);font-variant-numeric:tabular-nums}
+.offer-l .price sup{font-size:.35em;vertical-align:top;margin-right:4px;position:relative;top:.5em}
+.offer-l p{color:#b8c4d6}
+.offer-l .tag{display:inline-block;background:rgba(110,163,255,.18);color:#9cc0ff;font:700 12px/1 var(--body);letter-spacing:.1em;text-transform:uppercase;padding:7px 10px;border-radius:6px;justify-self:start}
+.offer-r{padding:36px;display:grid;gap:20px;align-content:start}
+.domain{display:grid;grid-template-columns:40px 1fr;gap:14px;background:var(--bg);border-radius:12px;padding:16px;font-size:15px}
+.domain .ic{width:40px;height:40px;border-radius:10px;background:var(--surface);border:1px solid var(--line);display:grid;place-items:center}
+.domain svg{width:20px;height:20px;stroke:var(--ink);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px;padding:0;list-style:none;counter-reset:t}
+@media (max-width:860px){.timeline{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.timeline{grid-template-columns:1fr}}
+.timeline li{counter-increment:t;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;display:grid;gap:6px}
+.timeline li::before{content:counter(t);display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--accent-soft);color:var(--accent);font:800 14px var(--display)}
+.timeline span{font-size:14px;color:var(--muted)}
+.timeline em{font-style:normal;font-size:12px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.08em}
+
+/* dúvidas */
+.faq{display:grid;gap:10px;max-width:780px}
+.faq details{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:0 20px}
+.faq summary{cursor:pointer;list-style:none;padding:18px 0;font-weight:700;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font:600 22px/1 var(--display);color:var(--accent)}
+.faq details[open] summary::after{content:"−"}
+.faq details p{padding:0 0 18px;color:var(--muted);font-size:15px;max-width:65ch}
+
+.close{background:var(--navy);color:#fff;padding:64px 0}
+.close .wrap{display:grid;gap:16px;justify-items:start}
+.close p{color:#b8c4d6;max-width:56ch;font-size:18px}
+.close .quote{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:14px 18px;font:700 18px var(--display);color:#fff}
+footer{padding:24px 0 40px;background:var(--navy);color:#7f8ea3;font-size:13px;border-top:1px solid rgba(255,255,255,.08)}
+</style>
+</head>
+<body>
+
+<nav class="top" aria-label="Seções da proposta">
+  <div class="wrap">
+    <a class="brand" href="#inicio">2R FILM'S <span>· Proposta</span></a>
+    <div class="nav">
+      <a href="#diagnostico">Diagnóstico</a>
+      <a href="#solucao">Solução</a>
+      <a href="#teste">Simulador</a>
+      <a href="#resultados">Resultados</a>
+      <a href="#retorno">Retorno</a>
+      <a href="#investimento">Investimento</a>
+      <a href="#duvidas">Dúvidas</a>
+    </div>
+    <a class="pill" href="#investimento">R$ 500</a>
+  </div>
+  <div class="progress" id="progress"></div>
+</nav>
+
+<header class="hero" id="inicio">
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="eyebrow">Proposta comercial · 5 de novembro de 2026</span>
+      <h1>A 2R em primeiro lugar no Google, <em>em Lagoa da Prata e região</em></h1>
+      <p class="lead">Um site profissional da 2R Film's e o perfil do Google ajustado do zero. Tudo pensado para quem pesquisa película, PPF ou adesivos na região chegar até vocês pelo WhatsApp.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#diagnostico">Ver a proposta</a>
+        <a class="btn btn-ghost" href="#teste">Testar o simulador</a>
+      </div>
+      <div class="facts">
+        <div><b>Site + Google</b>em um único pacote</div>
+        <div><b>Pronto em 10 dias</b>com prévia para aprovar</div>
+        <div><b>R$ 500</b>pagamento único</div>
+      </div>
+    </div>
+    <div class="phone" role="img" aria-label="Prévia de como o site da 2R Film's vai aparecer no celular">
+      <div class="notch"></div>
+      <div class="ms-head">2R <span>FILM'S</span><i>Lagoa da Prata</i></div>
+      <div class="ms-hero">
+        <span class="ms-stars">★★★★★ 5,0 no Google</span>
+        <b>Insulfilm e PPF em Lagoa da Prata</b>
+        <small>Revendedor autorizado Window Blue</small>
+        <div class="ms-wa">Pedir orçamento no WhatsApp</div>
+      </div>
+      <div class="ms-grid">
+        <div>Automotivo<small>Carros e motos</small></div>
+        <div>Residencial<small>Casas e empresas</small></div>
+        <div>PPF<small>Proteção da pintura</small></div>
+        <div>Linha pesada<small>Caminhões e máquinas</small></div>
+        <div>Adesivos<small>Comunicação visual</small></div>
+        <div>Envelopamento<small>Veículos e móveis</small></div>
+      </div>
+      <div class="ms-city">Atendemos Lagoa da Prata, Arcos, Japaraíba, Luz, Moema e região</div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="block" id="diagnostico">
+  <div class="wrap">
+    <div class="head">
+      <span class="step"><b>1</b> Diagnóstico</span>
+      <h2>O trabalho já é nota 5. Falta o Google mostrar isso.</h2>
+      <p class="lead">Pesquisamos o que um cliente encontra quando procura insulfilm em Lagoa da Prata.</p>
+    </div>
+    <div class="stats">
+      <div class="card stat good"><b>5,0</b><span>nota no Google. Todas as avaliações são elogios</span></div>
+      <div class="card stat bad"><b>4</b><span>avaliações. Os primeiros do mapa têm de 43 a 64</span></div>
+      <div class="card stat bad"><b>3</b><span>fotos no perfil, pouco para convencer quem não conhece a loja</span></div>
+      <div class="card stat bad"><b>0</b><span>site. O perfil mostra "Adicionar website"</span></div>
+    </div>
+    <div class="two" style="margin-top:16px">
+      <div class="card">
+        <h3>Avaliações no Google Maps</h3>
+        <p class="muted small">Busca "insulfilm lagoa da prata", 05/11/2026</p>
+        <div class="ranking" role="list">
+          <div class="row" role="listitem"><span>Equip Car</span><div class="track"><div class="fill" style="width:100%"></div></div><em>64</em></div>
+          <div class="row" role="listitem"><span>Som Bahia</span><div class="track"><div class="fill" style="width:90.6%"></div></div><em>58</em></div>
+          <div class="row" role="listitem"><span>Oficina do Oreia</span><div class="track"><div class="fill" style="width:67.2%"></div></div><em>43</em></div>
+          <div class="row me" role="listitem"><span>2R Film's</span><div class="track"><div class="fill" style="width:6.3%"></div></div><em>4</em></div>
+        </div>
+      </div>
+      <div class="card alert">
+        <h3>Onde a 2R deixa de aparecer</h3>
+        <ul>
+          <li><span class="x">✕</span><span>Na pesquisa comum do Google. Ali aparece a AutoFilm, de Formiga, com página feita para Lagoa da Prata.</span></li>
+          <li><span class="x">✕</span><span>Nas buscas por adesivos e comunicação visual da cidade. Só uma categoria está cadastrada.</span></li>
+          <li><span class="x">✕</span><span>Para quem procura residencial, PPF ou linha pesada. Nada disso está no perfil.</span></li>
+          <li><span class="x">✕</span><span>"Window Blue autorizado" está só no Instagram.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="solucao" style="background:var(--surface);border-block:1px solid var(--line)">
+  <div class="wrap">
+    <div class="head">
+      <span class="step"><b>2</b> Solução</span>
+      <h2>Duas frentes trabalhando juntas</h2>
+      <p class="lead">O site mostra ao Google tudo o que a 2R faz e onde atende. O perfil coloca a 2R no mapa na hora em que o cliente pesquisa.</p>
+    </div>
+    <div class="tabs" role="tablist" aria-label="Partes da solução">
+      <button role="tab" id="tab-site" aria-controls="panel-site" aria-selected="true">O site</button>
+      <button role="tab" id="tab-google" aria-controls="panel-google" aria-selected="false" tabindex="-1">O perfil do Google</button>
+    </div>
+
+    <div role="tabpanel" id="panel-site" aria-labelledby="tab-site">
+      <div class="feats">
+        <div class="card feat"><div class="ic"><svg viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg></div><h3>Feito para o celular</h3><p>Rápido, leve e fácil de usar com uma mão, onde está quase todo cliente.</p></div>
+        <div class="card feat"><div class="ic"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 0 1-13.4 7.8L3 21l1.2-4.6A9 9 0 1 1 21 12z"/></svg></div><h3>WhatsApp em todas as telas</h3><p>Mensagem pronta para cada serviço. O cliente toca e já chega dizendo o que quer.</p></div>
+        <div class="card feat"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h12"/></svg></div><h3>Uma página por serviço</h3><p>Automotivo, residencial, PPF, linha pesada, adesivos e envelopamento.</p></div>
+        <div class="card feat"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div><h3>Cidades atendidas</h3><p>Lagoa da Prata, Arcos, Japaraíba, Luz, Moema, Santo Antônio do Monte e Bom Despacho.</p></div>
+        <div class="card feat"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg></div><h3>Avaliações e antes/depois</h3><p>As notas do Google e fotos dos trabalhos, que são o que mais convence.</p></div>
+        <div class="card feat"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div><h3>Pronto para o Google</h3><p>Títulos, descrições e dados da empresa no formato que o Google lê.</p></div>
+      </div>
+
+      <div class="card simx" id="simulador">
+        <div class="simx-top">
+          <div>
+            <span class="step" style="text-transform:none;letter-spacing:0">Incluso no site · simulador de película</span>
+            <h3>Teste a película antes de aplicar</h3>
+          </div>
+          <div class="seg" id="sx-mode" role="group" aria-label="Onde aplicar" style="margin:0">
+            <button type="button" id="sx-carro" data-mode="carro" aria-pressed="true">Carro</button>
+            <button type="button" id="sx-casa" data-mode="casa" aria-pressed="false">Residencial</button>
+          </div>
+        </div>
+        <div class="simx-body">
+          <div class="stage">
+            <svg id="scene-carro" viewBox="0 0 640 300" role="img" aria-labelledby="t-carro">
+              <title id="t-carro">Carro visto de lado, com película nos vidros</title>
+              <defs>
+                <linearGradient id="c-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#cfe2fb"/><stop offset=".64" stop-color="#eef4fb"/><stop offset=".64" stop-color="#d5dbe3"/><stop offset="1" stop-color="#c1c8d2"/></linearGradient>
+                <linearGradient id="c-body" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2f548a"/><stop offset=".5" stop-color="#15294a"/><stop offset="1" stop-color="#0b1626"/></linearGradient>
+                <linearGradient id="c-in" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b4d0f3"/><stop offset="1" stop-color="#e9f0f9"/></linearGradient>
+                <clipPath id="c-glass"><path d="M236 146 C256 122 280 106 318 103 L356 103 L356 146 Z"/><path d="M368 146 L368 103 L420 103 C448 105 472 122 494 146 Z"/></clipPath>
+              </defs>
+              <rect width="640" height="300" fill="url(#c-bg)"/>
+              <ellipse cx="337" cy="254" rx="275" ry="14" fill="#0b1626" opacity=".2"/>
+              <path d="M66 214 C64 182 84 166 128 160 L214 148 C240 118 272 96 322 92 L424 92 C462 94 488 114 512 144 L566 154 C598 160 610 182 608 214 Z" fill="url(#c-body)"/>
+              <g clip-path="url(#c-glass)">
+                <rect x="230" y="96" width="270" height="56" fill="url(#c-in)"/>
+                <circle cx="326" cy="121" r="11" fill="#d9a97f"/><path d="M308 147 C310 132 342 132 344 147 Z" fill="#3d5a80"/>
+                <circle cx="438" cy="120" r="11" fill="#b9825d"/><path d="M420 147 C422 131 454 131 456 147 Z" fill="#8a3f3f"/>
+                <rect class="film" id="c-film" x="230" y="96" width="270" height="56" fill="#05080c" opacity=".8"/>
+                <path d="M262 96 L300 96 L250 152 L212 152 Z" fill="#fff" opacity=".18"/>
+                <path d="M410 96 L426 96 L376 152 L360 152 Z" fill="#fff" opacity=".12"/>
+              </g>
+              <path d="M236 146 C256 122 280 106 318 103 L356 103 L356 146 Z M368 146 L368 103 L420 103 C448 105 472 122 494 146 Z" fill="none" stroke="#0b1626" stroke-width="4"/>
+              <path d="M130 172 H592" stroke="#4a6fa3" stroke-width="2" opacity=".55"/>
+              <path d="M362 150 V212" stroke="#0b1626" stroke-width="2" opacity=".55"/>
+              <rect x="300" y="160" width="26" height="5" rx="2.5" fill="#9fb2ca"/><rect x="410" y="160" width="26" height="5" rx="2.5" fill="#9fb2ca"/>
+              <path d="M500 140 L520 131 L527 146 L506 151 Z" fill="#15294a"/>
+              <rect x="584" y="170" width="20" height="10" rx="3" fill="#ffd27a"/>
+              <rect x="66" y="172" width="14" height="10" rx="3" fill="#e0483e"/>
+              <circle cx="170" cy="214" r="40" fill="#05080c"/><circle cx="170" cy="214" r="24" fill="#a3adbb"/><circle cx="170" cy="214" r="8" fill="#3b4656"/>
+              <circle cx="512" cy="214" r="40" fill="#05080c"/><circle cx="512" cy="214" r="24" fill="#a3adbb"/><circle cx="512" cy="214" r="8" fill="#3b4656"/>
+            </svg>
+            <svg id="scene-casa" viewBox="0 0 640 300" role="img" aria-labelledby="t-casa" hidden>
+              <title id="t-casa">Janela de casa com película, vista da rua</title>
+              <defs>
+                <linearGradient id="h-mirror" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#eef4fb"/><stop offset=".42" stop-color="#a7bbd2"/><stop offset=".55" stop-color="#dbe5f0"/><stop offset="1" stop-color="#8aa0b9"/></linearGradient>
+                <clipPath id="h-glass"><rect x="160" y="78" width="320" height="168"/></clipPath>
+                <filter id="h-frost" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="7"/></filter>
+              </defs>
+              <rect width="640" height="300" fill="#e8dfd3"/>
+              <rect width="640" height="30" fill="#c7b59f"/>
+              <path d="M0 30 H640" stroke="#b3a089" stroke-width="3"/>
+              <ellipse cx="80" cy="292" rx="78" ry="34" fill="#5d8f61"/><ellipse cx="566" cy="294" rx="86" ry="30" fill="#5d8f61"/>
+              <rect id="h-night" width="640" height="300" fill="#0b1626" opacity="0"/>
+              <rect x="146" y="64" width="348" height="196" rx="4" fill="#3a3f47"/>
+              <g clip-path="url(#h-glass)">
+                <g id="h-room">
+                  <rect x="160" y="78" width="320" height="168" fill="#d8c7b0"/>
+                  <rect x="160" y="212" width="320" height="34" fill="#a88b6a"/>
+                  <rect x="186" y="98" width="74" height="52" rx="3" fill="#6f8399"/><rect x="192" y="104" width="62" height="40" fill="#c9d6e4"/>
+                  <circle id="h-glow" cx="226" cy="160" r="90" fill="#ffd98a" opacity="0"/>
+                  <rect x="298" y="150" width="134" height="32" rx="10" fill="#4a6c99"/>
+                  <rect x="290" y="172" width="150" height="44" rx="10" fill="#3f5f8a"/>
+                  <rect x="282" y="162" width="20" height="54" rx="8" fill="#365377"/><rect x="428" y="162" width="20" height="54" rx="8" fill="#365377"/>
+                  <circle cx="362" cy="142" r="13" fill="#c8946c"/><path d="M342 184 C344 160 380 160 382 184 Z" fill="#c0504d"/>
+                  <line x1="226" y1="170" x2="226" y2="214" stroke="#2b2f36" stroke-width="3"/><path d="M210 170 H242 L234 150 H218 Z" fill="#f2d48f"/>
+                  <rect x="452" y="196" width="18" height="20" fill="#8a5a3b"/><circle cx="461" cy="184" r="15" fill="#4f8a5b"/>
+                </g>
+                <rect class="film" id="h-film" x="160" y="78" width="320" height="168" fill="url(#h-mirror)" opacity=".95"/>
+                <path id="h-shine" d="M206 78 H254 L184 246 H136 Z" fill="#fff" opacity=".16"/>
+              </g>
+              <rect x="316" y="64" width="8" height="196" fill="#3a3f47"/>
+              <rect x="136" y="258" width="368" height="10" rx="3" fill="#cfc4b5"/>
+            </svg>
+            <span class="badge" id="sx-badge">Fumê G20</span>
+          </div>
+          <div class="ctl">
+            <div>
+              <p class="lbl">Escolha a película</p>
+              <div class="chips" id="sx-chips" role="group" aria-label="Película"></div>
+            </div>
+            <div class="daynight" id="sx-daynight" hidden>
+              <p class="lbl">Horário</p>
+              <div class="seg" role="group" aria-label="Dia ou noite" style="margin:0">
+                <button type="button" id="sx-dia" data-night="0" aria-pressed="true">Dia</button>
+                <button type="button" id="sx-noite" data-night="1" aria-pressed="false">Noite</button>
+              </div>
+            </div>
+            <div class="sx-read" aria-live="polite"><b id="sx-name">Fumê G20</b><span id="sx-desc"></span></div>
+            <div class="meters">
+              <div class="m"><div class="mrow"><span>Privacidade</span><b id="v-priv">Alta</b></div><div class="mtrack"><div id="m-priv"></div></div></div>
+              <div class="m"><div class="mrow"><span>Luz que entra</span><b id="v-luz">20%</b></div><div class="mtrack"><div id="m-luz"></div></div></div>
+            </div>
+            <p class="tip" id="sx-tip"></p>
+          </div>
+        </div>
+        <p class="small muted">Simulação ilustrativa. A cor real varia conforme a marca e a linha da película. No site, o cliente escolhe e já chama no WhatsApp sabendo o que quer.</p>
+      </div>
+    </div>
+
+    <div role="tabpanel" id="panel-google" aria-labelledby="tab-google" hidden>
+      <div class="gwrap">
+        <div>
+          <div class="seg" role="group" aria-label="Comparar o perfil">
+            <button type="button" id="v-hoje" data-v="hoje" aria-pressed="false">Hoje</button>
+            <button type="button" id="v-depois" data-v="depois" aria-pressed="true">Depois do ajuste</button>
+          </div>
+          <div class="gbp" id="gbp" aria-live="polite"></div>
+        </div>
+        <div class="card">
+          <h3>O que muda no perfil</h3>
+          <table class="cmp" style="margin-top:8px">
+            <thead><tr><th>Item</th><th>Hoje</th><th>Depois</th></tr></thead>
+            <tbody>
+              <tr><td>Categorias</td><td>1</td><td>4</td></tr>
+              <tr><td>Fotos</td><td>3</td><td>Até 10 novas</td></tr>
+              <tr><td>Site</td><td>Não</td><td>Sim</td></tr>
+              <tr><td>Descrição e serviços</td><td>Não</td><td>Completos</td></tr>
+              <tr><td>Window Blue</td><td>Não</td><td>Como produto</td></tr>
+              <tr><td>Postagens</td><td>0</td><td>4 prontas</td></tr>
+              <tr><td>Kit de avaliações</td><td>Não</td><td>QR code + mensagem</td></tr>
+            </tbody>
+          </table>
+          <p class="small muted" style="margin-top:12px">Também verificamos um cadastro "2R INSULFILMS" em Arcos, sem telefone, que pode confundir o Google.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="teste">
+  <div class="wrap">
+    <div class="head">
+      <span class="step"><b>3</b> Simulador</span>
+      <h2>Teste a película no carro e na casa</h2>
+      <p class="lead">Este simulador vai estar no site da 2R. O cliente testa os tons antes de sair de casa e chama no WhatsApp já sabendo o que quer. Experimente.</p>
+    </div>
+    <div id="sim-slot"></div>
+  </div>
+</section>
+
+<section class="block" id="resultados" style="background:var(--surface);border-block:1px solid var(--line)">
+  <div class="wrap">
+    <div class="head">
+      <span class="step"><b>4</b> Resultados</span>
+      <h2>Meta: primeiro lugar em toda a região</h2>
+      <p class="lead">Começamos por Lagoa da Prata e pelas cidades mais perto, depois avançamos pelo restante da região. Uma parte depende do nosso trabalho, outra do dia a dia da loja.</p>
+    </div>
+    <div class="pact">
+      <div class="card us">
+        <span class="who">Nós garantimos</span>
+        <ul class="ticks">
+          <li>Site no ar em até 10 dias depois de recebermos o formulário e as fotos</li>
+          <li>Perfil do Google completo em até 3 dias</li>
+          <li>Ajustes no site sem custo por 30 dias</li>
+        </ul>
+      </div>
+      <div class="card you">
+        <span class="who">Vocês fazem</span>
+        <ul class="ticks">
+          <li>Pedir avaliação a cada cliente satisfeito, com o QR code ou a mensagem pronta</li>
+          <li>Mandar fotos dos trabalhos, mesmo pelo celular</li>
+          <li>Responder rápido quem chamar no WhatsApp</li>
+        </ul>
+      </div>
+      <div class="card both">
+        <span class="who">Juntos buscamos</span>
+        <div>
+          <div class="goal"><span><b>1º</b> Lagoa da Prata</span><b>1º lugar</b></div>
+          <div class="goal"><span><b>2º</b> Japaraíba, Moema e Santo Antônio do Monte</span><b>1º lugar</b></div>
+          <div class="goal"><span><b>3º</b> Luz, Arcos e Bom Despacho</span><b>1º lugar</b></div>
+          <div class="goal"><span>Avaliações no Google</span><b>25 ou mais</b></div>
+        </div>
+        <p class="small muted">Ordem de prioridade: das cidades mais perto para as mais distantes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="retorno">
+  <div class="wrap">
+    <div class="head">
+      <span class="step"><b>5</b> Retorno</span>
+      <h2>Com quantos serviços o investimento se paga?</h2>
+      <p class="lead">Escolha o valor médio de um serviço da 2R.</p>
+    </div>
+    <div class="calc">
+      <div style="display:grid;gap:22px;align-content:start">
+        <div class="field">
+          <label for="ticket">Valor médio de um serviço <output id="ticketOut" for="ticket">R$ 300</output></label>
+          <input type="range" id="ticket" min="100" max="1500" step="50" value="300">
+        </div>
+        <p class="small muted">Arraste até o valor que mais se parece com os serviços da loja.</p>
+      </div>
+      <div class="res" aria-live="polite">
+        <div class="big"><b id="payback">2 serviços</b><span id="pbnote">2 serviços de R$ 300 pagam todo o investimento de R$ 500.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="investimento">
+  <div class="wrap">
+    <div class="head">
+      <span class="step"><b>6</b> Investimento</span>
+      <h2>Um valor, tudo incluso</h2>
+    </div>
+    <div class="offer">
+      <div class="offer-l">
+        <span class="tag">Site + Google</span>
+        <div class="price"><sup>R$</sup>500</div>
+        <p>Pagamento único. Sem mensalidade pelo nosso serviço. O site e o perfil são da 2R.</p>
+        <a class="btn btn-primary" href="https://wa.me/5537999477556?text=Ol%C3%A1%2C%20Lucas!%20Vi%20a%20proposta%20da%202R%20Film%27s%20e%20quero%20come%C3%A7ar." style="justify-self:start">Quero começar pelo WhatsApp</a>
+      </div>
+      <div class="offer-r">
+        <h3>O que está incluso</h3>
+        <ul class="ticks">
+          <li>Site profissional com a marca da 2R</li>
+          <li>Páginas de serviço e cidades atendidas</li>
+          <li>Simulador de película</li>
+          <li>WhatsApp com mensagem pronta</li>
+          <li>Hospedagem e cadeado de segurança</li>
+          <li>Perfil do Google completo, com até 10 fotos novas</li>
+          <li>Kit de avaliações com QR code</li>
+          <li>30 dias de ajustes no site</li>
+        </ul>
+        <div class="domain">
+          <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></div>
+          <div><b>Domínio por conta da 2R.</b> O endereço do site fica registrado no nome de vocês, com pagamento anual feito direto por vocês. Nós cuidamos de toda a configuração.</div>
+        </div>
+      </div>
+    </div>
+    <ol class="timeline">
+      <li><em>Dia 1</em><b>Formulário rápido</b><span>Vocês preenchem serviços, cidades e informações quando puderem.</span></li>
+      <li><em>Dias 1 a 3</em><b>Perfil do Google</b><span>Categorias, fotos, serviços e kit de avaliações.</span></li>
+      <li><em>Até o dia 8</em><b>Prévia do site</b><span>Vocês veem e pedem o que quiserem mudar.</span></li>
+      <li><em>Até o dia 10</em><b>Site no ar</b><span>Ligado ao domínio e ao perfil do Google.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="block" id="duvidas" style="background:var(--surface);border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="head">
+      <span class="step"><b>7</b> Dúvidas</span>
+      <h2>Perguntas frequentes</h2>
+    </div>
+    <div class="faq">
+      <details open><summary>Tem mensalidade?</summary><p>Não. O valor de R$ 500 é pago uma vez. O único custo recorrente é o domínio, que é anual e pago direto por vocês.</p></details>
+      <details><summary>Como funciona o domínio?</summary><p>O domínio é o endereço do site. Ele fica registrado no nome da 2R, então é de vocês. A renovação é anual. Nós fazemos toda a configuração para o site funcionar nele.</p></details>
+      <details><summary>Em quanto tempo começo a aparecer mais no Google?</summary><p>As mudanças no perfil começam a valer nos primeiros dias. A posição no mapa melhora conforme chegam avaliações e fotos novas. Por isso o trabalho começa por Lagoa da Prata e avança para as cidades vizinhas.</p></details>
+      <details><summary>O que vocês precisam de mim?</summary><p>Que preencham um formulário rápido, mandem fotos dos trabalhos (pode ser do celular) e liberem o acesso ao perfil do Google. O resto é com a gente.</p></details>
+      <details><summary>E se eu quiser mudar algo depois que o site estiver pronto?</summary><p>Nos primeiros 30 dias os ajustes no site estão inclusos, sem custo.</p></details>
+    </div>
+  </div>
+</section>
+</main>
+
+<section class="close" id="comecar">
+  <div class="wrap">
+    <h2>Vamos colocar a 2R em primeiro lugar na região?</h2>
+    <p>Para começar, é só me chamar no WhatsApp. A mensagem já vai pronta.</p>
+    <a class="btn btn-primary" href="https://wa.me/5537999477556?text=Ol%C3%A1%2C%20Lucas!%20Vi%20a%20proposta%20da%202R%20Film%27s%20e%20quero%20come%C3%A7ar.">Quero começar pelo WhatsApp</a>
+    <p class="small">WhatsApp do Lucas: (37) 99947-7556</p>
+    <p class="small">Em seguida enviamos um formulário rápido. Assim que ele voltar preenchido, o perfil do Google fica pronto em até 3 dias.</p>
+  </div>
+</section>
+<footer><div class="wrap">Proposta preparada por Lucas para a 2R Film's · Dados coletados no Google e no Google Maps em 05/11/2026.</div></footer>
+
+<script>
+(function(){
+  /* progresso e menu ativo */
+  var bar=document.getElementById("progress");
+  function prog(){var h=document.documentElement;var p=h.scrollTop/((h.scrollHeight-h.clientHeight)||1);bar.style.width=(p*100).toFixed(1)+"%"}
+  window.addEventListener("scroll",prog,{passive:true});prog();
+  var links=document.querySelectorAll(".nav a");
+  if("IntersectionObserver" in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+e.target.id)})}})},{rootMargin:"-45% 0px -50% 0px"});
+    ["diagnostico","solucao","teste","resultados","retorno","investimento","duvidas"].forEach(function(id){io.observe(document.getElementById(id))});
+  }
+
+  /* abas */
+  var tabs=document.querySelectorAll('[role=tab]');
+  function sel(t){tabs.forEach(function(x){var on=x===t;x.setAttribute("aria-selected",on);x.tabIndex=on?0:-1;document.getElementById(x.getAttribute("aria-controls")).hidden=!on})}
+  tabs.forEach(function(t,i){
+    t.addEventListener("click",function(){sel(t)});
+    t.addEventListener("keydown",function(e){if(e.key==="ArrowRight"||e.key==="ArrowLeft"){var n=tabs[(i+(e.key==="ArrowRight"?1:tabs.length-1))%tabs.length];sel(n);n.focus()}});
+  });
+
+  var slot=document.getElementById("sim-slot");if(slot)slot.appendChild(document.getElementById("simulador"));
+  /* simulador carro e residencial */
+  var FILMS={
+    carro:[
+      {k:"G5",n:"Fumê G5",luz:5,priv:95,op:.93,d:"O mais escuro. Quase não se vê o interior do carro."},
+      {k:"G20",n:"Fumê G20",luz:20,priv:80,op:.8,d:"Escuro, com bastante privacidade. Um dos mais pedidos."},
+      {k:"G35",n:"Fumê G35",luz:35,priv:62,op:.65,d:"Equilíbrio entre privacidade e boa visão à noite."},
+      {k:"G50",n:"Fumê G50",luz:50,priv:42,op:.5,d:"Mais clara. Corta calor e claridade sem escurecer demais."},
+      {k:"G70",n:"Fumê G70",luz:70,priv:20,op:.3,d:"Quase transparente. O foco é calor e raios UV."}
+    ],
+    casa:[
+      {k:"Fumê G20",n:"Fumê G20",luz:20,priv:80,privN:25,fill:"#05080c",op:.8,opN:.42,d:"Escurece bem o ambiente e dá privacidade durante o dia."},
+      {k:"Fumê G50",n:"Fumê G50",luz:50,priv:45,privN:10,fill:"#05080c",op:.5,opN:.22,d:"Reduz claridade e calor sem deixar a casa escura."},
+      {k:"Espelhada",n:"Espelhada",luz:15,priv:95,privN:15,fill:"url(#h-mirror)",op:.95,opN:.3,d:"De dia funciona como espelho: quem está fora não vê dentro. Muito usada em fachadas."},
+      {k:"Jateada",n:"Jateada",luz:70,priv:95,privN:95,fill:"#f3f5f7",op:.55,opN:.6,blur:true,d:"Efeito vidro fosco. Deixa a luz entrar e esconde o interior. Ideal para banheiros e divisórias."},
+      {k:"Incolor UV",n:"Incolor anti-UV",luz:90,priv:5,privN:0,fill:"#bfe0ff",op:.1,opN:.1,d:"Quase invisível. Bloqueia raios UV e protege móveis e pisos do desbotamento."}
+    ]
+  };
+  var TIP={carro:"Para-brisa e vidros da frente têm limite de escurecimento por lei. A 2R orienta qual película pode em cada vidro.",dia:"Ideal para salas, quartos, escritórios e fachadas de lojas. Ajuda a deixar o ambiente mais fresco.",noite:"À noite, com a luz acesa dentro, películas fumê e espelhadas deixam ver o interior. A jateada mantém a privacidade."};
+  var st={mode:"carro",idx:{carro:1,casa:2},night:false};
+  var el=function(id){return document.getElementById(id)};
+  var chipsBox=el("sx-chips");
+  function build(){
+    chipsBox.innerHTML="";
+    FILMS[st.mode].forEach(function(f,i){
+      var b=document.createElement("button");b.type="button";b.className="chip";b.textContent=f.k;
+      b.setAttribute("aria-pressed",i===st.idx[st.mode]?"true":"false");
+      b.addEventListener("click",function(){st.idx[st.mode]=i;render()});
+      chipsBox.appendChild(b);
+    });
+  }
+  function lvl(p){return p>=75?"Alta":p>=40?"Média":"Baixa"}
+  function render(){
+    var f=FILMS[st.mode][st.idx[st.mode]],casa=st.mode==="casa",n=casa&&st.night;
+    chipsBox.querySelectorAll(".chip").forEach(function(b,i){b.setAttribute("aria-pressed",i===st.idx[st.mode]?"true":"false")});
+    el("scene-carro").toggleAttribute("hidden",casa);el("scene-casa").toggleAttribute("hidden",!casa);
+    el("sx-daynight").hidden=!casa;
+    if(casa){
+      var hf=el("h-film");hf.setAttribute("fill",f.fill);hf.setAttribute("opacity",n?f.opN:f.op);
+      if(f.blur)el("h-room").setAttribute("filter","url(#h-frost)");else el("h-room").removeAttribute("filter");
+      el("h-night").setAttribute("opacity",n?.62:0);el("h-glow").setAttribute("opacity",n?.55:0);el("h-shine").setAttribute("opacity",n?.04:.16);
+    }else{
+      el("c-film").setAttribute("opacity",f.op);
+    }
+    var priv=n?f.privN:f.priv;
+    el("sx-badge").textContent=f.n+(casa?(n?" · noite":" · dia"):"");
+    el("sx-name").textContent=f.n;el("sx-desc").textContent=f.d;
+    el("v-priv").textContent=lvl(priv);el("m-priv").style.width=priv+"%";
+    el("v-luz").textContent=f.luz+"%";el("m-luz").style.width=f.luz+"%";
+    el("sx-tip").textContent=casa?(n?TIP.noite:TIP.dia):TIP.carro;
+    document.querySelectorAll("#sx-mode button").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.mode===st.mode?"true":"false")});
+    document.querySelectorAll("#sx-daynight button").forEach(function(b){b.setAttribute("aria-pressed",(b.dataset.night==="1")===st.night?"true":"false")});
+  }
+  document.querySelectorAll("#sx-mode button").forEach(function(b){b.addEventListener("click",function(){st.mode=b.dataset.mode;build();render()})});
+  document.querySelectorAll("#sx-daynight button").forEach(function(b){b.addEventListener("click",function(){st.night=b.dataset.night==="1";render()})});
+  build();render();
+
+  /* perfil antes e depois */
+  var gb={
+    hoje:{ph:'<div>3 fotos</div><div></div><div></div>',st:'★★★★★ <span>5,0 (4)</span>',ct:'Serviço de aplicação de película automotiva',b:'<span>Ligar</span><span>Rotas</span><span class="off">Sem site</span>',l:'<li>Av. Brasil, 1242 - Lj 2, Lagoa da Prata</li><li>Aberto · Fecha 18:00</li><li class="miss">Sem descrição</li><li class="miss">Sem lista de serviços</li>',po:'Nenhuma postagem'},
+    depois:{ph:'<div class="p1"></div><div class="p2"></div><div class="p3"></div>',st:'★★★★★ <span>5,0 (meta: 25+)</span>',ct:'Película automotiva · Residencial · PPF · Comunicação visual',b:'<span>Ligar</span><span>Rotas</span><span>Site</span><span>WhatsApp</span>',l:'<li>Av. Brasil, 1242 - Lj 2, Lagoa da Prata</li><li>Aberto · Fecha 18:00</li><li>Revendedor autorizado Window Blue</li><li>Atende Lagoa da Prata, Arcos, Luz e região</li>',po:'<b>Novidade:</b> antes e depois de uma picape com película G20.'}
+  };
+  var box=document.getElementById("gbp"),seg=document.querySelectorAll("#panel-google .seg button");
+  function show(v){var d=gb[v];box.innerHTML='<div class="gbp-ph">'+d.ph+'</div><h4>2R FILM’S</h4><div class="st">'+d.st+'</div><div class="ct">'+d.ct+'</div><div class="gbp-b">'+d.b+'</div><ul>'+d.l+'</ul><div class="po">'+d.po+'</div>';seg.forEach(function(b){b.setAttribute("aria-pressed",b.dataset.v===v)})}
+  seg.forEach(function(b){b.addEventListener("click",function(){show(b.dataset.v)})});show("depois");
+
+  /* calculadora */
+  var PRICE=500,fmt=function(n){return "R$ "+n.toLocaleString("pt-BR")};
+  var t=document.getElementById("ticket");
+  function calc(){var tk=+t.value,n=Math.ceil(PRICE/tk);
+    document.getElementById("ticketOut").textContent=fmt(tk);
+    document.getElementById("payback").textContent=n===1?"1 serviço":n+" serviços";
+    document.getElementById("pbnote").textContent=n===1?"Um único serviço de "+fmt(tk)+" já paga todo o investimento de R$ 500.":n+" serviços de "+fmt(tk)+" pagam todo o investimento de R$ 500."}
+  t.addEventListener("input",calc);calc();
+})();
+</script>
+</body>
+</html>
